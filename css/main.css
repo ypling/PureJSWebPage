@@ -1,0 +1,964 @@
+/*************************************************
+ *************************************************
+ *****                                       *****
+ *****                 index                 *****
+ *****  0 - General settings                 *****
+ *****  1 - Cover                            *****
+ *****      1.1 - Cover background           *****
+ *****      1.2 - Cover content              *****
+ *****      1.3 - Cover ghost button         *****
+ *****      1.4 - Cover quote                *****
+ *****      1.5 - Cover font                 *****
+ *****  2 - Navigation Bar                   *****
+ *****  3 - Sections                         *****
+ *****      3.1 - Section general settings   *****
+ *****      3.2 - First section              *****
+ *****                                       *****
+ *****  f - Customer animate                 *****
+ *****                                       *****
+ *****                                       *****
+ *************************************************
+ *************************************************/
+
+/*************************************************
+ ******                                     ******
+ ******           General settings          ******
+ ******                                     ******
+ *************************************************/
+html {
+    height: 100%;
+    max-height: 100%;
+    font-size: 62.5%;
+    font-weight: 400;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    position: relative;
+    height: 100%;
+    max-height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.01rem;
+    background-color: #f8f8f8;
+    font-size: 1.8rem;
+    line-height: 1.75em;
+    color: #3A4145;
+}
+
+a:active, a:hover {
+    outline: 0 none;
+}
+
+.btn {
+    text-transform: uppercase;
+    border-radius: 1px;
+}
+
+.btn-brilent {
+    border: 2px #4294ff solid;
+    color: #fefefe;
+    text-shadow: none;
+    background: #4294ff;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-brilent:hover, .btn-brilent:focus {
+    color: #4294ff;
+    border: 2px #eeeeee solid;
+    text-shadow: none;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+button i {
+    margin-right: 7px;
+}
+
+/*************************************************
+ ******                                     ******
+ ******          Navigation Bar             ******
+ ******                                     ******
+ *************************************************/
+
+#navbar-example {
+    display: none;
+}
+
+.nav > li > a {
+    padding: 15px 0;
+    cursor: pointer;
+    height: 70px;
+    text-align: center;
+}
+
+.nav .navbar-header a {
+    width: 180px;
+    background: url("../images/logo.png") no-repeat center center;
+    background-size: 150px auto;
+}
+
+.nav li {
+    font-size: 0.75em;
+    height: 70px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.navbar-brilent .navbar-nav > .active > a, .navbar-brilent .navbar-nav > .active > a:hover, .navbar-brilent .navbar-nav > .active > a:focus {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    background: #4294ff;
+    color: #fff;
+}
+
+.nav li i {
+    font-size: 20px;
+    width: 100%;
+    display: inline-block;
+}
+
+.navbar-brilent {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*************************************************
+ ******                                     ******
+ ******             Sections                ******
+ ******                                     ******
+ *************************************************/
+
+/* Section general settings */
+section.section-block {
+    display: block;
+    padding-top: 60px;
+    margin-bottom: 40px;
+}
+
+section .container {
+    padding-bottom: 60px;
+}
+
+section .container:after {
+    width: 80%;
+    height: 1px;
+    margin-bottom: 5px;
+    margin-top: 60px;
+    position: absolute;
+    left: 50%;
+    margin-left: -40%;
+    display: block;
+    content: '';
+    background: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
+    background: -o-linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
+    background: -moz-linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
+    background: -webkit-linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
+}
+
+/*.section-block h1 {*/
+    /*color: #000;*/
+    /*font-size: 44px;*/
+    /*line-height: 44px;*/
+    /*font-weight: 300;*/
+    /*font-style: normal;*/
+    /*text-align: center;*/
+    /*text-transform: uppercase;*/
+    /*position: relative;*/
+    /*letter-spacing: 0.1em;*/
+    /*margin-bottom: 17px;*/
+    /*font-family: "Open Sans", sans-serif;*/
+/*}*/
+
+.section-block h2.sub-title {
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.1;
+    color: #888;
+    margin: 0 0 90px 0;
+    font-weight: 300;
+}
+
+.section-block h1.no-subtitle {
+    margin-bottom: 90px;
+}
+
+.section-block h2.sub-title:after, .section-block h1.no-subtitle:after {
+    background-color: #4294ff;
+    display: block;
+    height: 1px;
+    width: 100px;
+    content: '';
+    position: absolute;
+    margin-left: -50px;
+    margin-top: 20px;
+    left: 50%;
+}
+
+section .section-content {
+    padding: 0 15px;
+    margin-bottom: 20px;
+    color: #101010;
+    font-size: 16px;
+}
+
+section .section-content span.font-lg {
+    color: #080808;
+    border-bottom: 1px #080808 dashed;
+    font-size: 20px;
+}
+
+section div.img-container {
+
+}
+
+section div.apply-button {
+    margin-top: 60px;
+    text-align: center;
+}
+
+section div.apply-button button {
+    margin: 10px 15px;
+    width: 280px;
+}
+
+/* Section-1 */
+#video {
+    margin-top: 70px;
+}
+
+#video button {
+    margin: 0 auto;
+}
+
+/* Section-2 */
+#approach {
+
+}
+
+#approach ul {
+    list-style: none;
+}
+
+#approach ul li {
+    margin-bottom: 5px;
+}
+
+#approach ul li:nth-child(odd) {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#approach ul li:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Section-3 */
+#mentors {
+
+}
+
+.section-people {
+    position: relative;
+}
+
+/* mentors filter */
+.section-people div.filter {
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+
+div.filter ul {
+    margin: 15px 0 0;
+    font-size: 18px;
+    list-style: none;
+}
+
+div.filter ul li {
+    padding: 0 10px;
+    display: inline-block;
+    border-left: 1px solid #444;
+    list-style: outside none none;
+}
+
+div.filter ul li:before {
+    content: "";
+    display: inline-block;
+    margin-right: 4px;
+    height: 15px;
+    width: 15px;
+}
+
+div.filter ul li:first-child {
+    border-left: medium none;
+}
+
+div.filter ul li.data:before {
+    background: none repeat scroll 0 0 #FFC336;
+}
+
+div.filter ul li.engineering:before {
+    background: none repeat scroll 0 0 #269abc;
+}
+
+div.filter ul li.career:before {
+    background: none repeat scroll 0 0 #449d44;
+}
+
+div.filter ul li a {
+    cursor: pointer;
+    color: #333;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease 0s;
+    text-decoration: none;
+    background: none repeat scroll 0 0 transparent;
+}
+
+div.filter ul li a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+}
+
+/* mentors show */
+.section-people div.emp {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 240px;
+    text-align: center;
+}
+
+.section-people .pic {
+    position: relative;
+    background-color: #e6f2f7;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.section-people div.emp img {
+    background-color: #e6f2f7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 200px;
+    vertical-align: middle;
+    border: 0 none;
+}
+
+.section-people .data .pic {
+    border: 3px solid #FFC336;
+}
+
+.section-people .engineering .pic {
+    border: 3px solid #269abc;
+}
+
+.section-people .career .pic {
+    border: 3px solid #449d44;
+}
+
+.section-people h2.name {
+    font-family: "Courier New", sans-serif;
+    text-align: center;
+    font-size: 1.25em;
+    color: #000;
+    font-weight: 700;
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    top: 155px;
+    left: -70px;
+    -webkit-transform: rotate(42deg);
+    transform: rotate(42deg);
+}
+
+.section-people div.linkedin {
+    position: absolute;
+    left: 50%;
+    bottom: 45px;
+    width: 40px;
+    height: 35px;
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+.section-people div.linkedin a {
+    position: relative;
+    font-size: 25px;
+    background: #fff center center;
+}
+
+.section-people div.linkedin a i {
+    font-size: 40px;
+    color: #1f85be;
+}
+
+.emp-container {
+    position: relative;
+    width: 100%;
+}
+
+.emp-show {
+    position: absolute;
+    float: none;
+}
+
+/* section-4 */
+#fellows {
+
+}
+
+.stu-container {
+    position: relative;
+    width: 100%;
+}
+
+.stu-show {
+    position: absolute;
+    float: none;
+}
+
+/* section-5 */
+#testimonials {
+
+}
+
+#testimonials div.testimonial {
+    display: block;
+    margin: 60px 10px;
+    padding: 15px;
+    font-size: 16px;
+    height: 180px;
+    position: relative;
+}
+
+#testimonials div.testimonial:nth-child(odd) {
+    background: rgba(66, 148, 255, 0.1);
+    text-align: right;
+}
+
+#testimonials div.testimonial:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+    text-align: left;
+}
+
+#testimonials div.testimonial p.camper-name {
+    margin: 30px 0 0 0;
+}
+
+#testimonials div.testimonial p.camper-title {
+    font-weight: 600;
+}
+
+#testimonials .container:after {
+    display: none;
+}
+
+#testimonials div.apply-button {
+    margin-top: 0;
+}
+
+/* section-6 */
+#academy {
+    margin-top: 70px;
+}
+
+#academy div.section-content-summary {
+    text-align: center;
+    font-size: 1.1em;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #888;
+    margin-bottom: 30px;
+}
+
+#academy i {
+    margin-right: 10px;
+}
+
+#academy h4 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+#academy .online-content {
+    position: relative;
+    display: block;
+    margin: 40px 15px;
+}
+
+#academy .online-content i {
+    width: 55px;
+    height: 55px;
+    margin: 5px 5px 5px 15px;
+    float: left;
+    font-size: 50px;
+    color: #4294ff;
+}
+
+#academy .online-content p {
+    margin-left: 80px;
+    height: auto;
+}
+
+/* section-7 */
+#faq {
+
+}
+
+#faq .panel-group {
+    margin-bottom: 20px;
+}
+
+#faq .panel-title {
+    color: #204d74;
+    display: block;
+    padding: 10px 15px;
+    margin: -10px -15px;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#faq .panel-body {
+    border-top: 1px solid lightgray;
+}
+
+#faq .panel-default > .panel-heading {
+    color: #333;
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+#faq .alert {
+    font-size: 12px;
+    padding: 0;
+    margin-bottom: 5px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+/* section-8 */
+#applyNow {
+
+}
+
+/* section-9 */
+#contact, #contact h1 {
+    color: #fff;
+    background-color: #4294ff;
+}
+
+#contact h2 {
+    color: #A2F4FF;
+}
+
+#contact a {
+    background-color: transparent;
+    color: #82D4FF;
+}
+
+#contact .btn-brilent {
+    border: 2px #fefefe solid;
+    color: #4294ff;
+    text-shadow: none;
+    background: #fefefe;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#contact .btn-brilent:hover, #contact .btn-brilent:focus {
+    color: #fefefe;
+    border: 2px #eeeeee solid;
+    text-shadow: none;
+    background: #4294ff;
+}
+
+/*************************************************
+ ******                                     ******
+ ******               Cover                 ******
+ ******                                     ******
+ *************************************************/
+
+/* Cover background */
+.cover {
+    position: relative;
+    margin-bottom: -70px;
+    text-align: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/* Sub cover settings */
+.mid-cover {
+    height: 375px;
+    margin-top: 70px;
+    margin-bottom: -70px;
+    background-image: url('../images/covers/coaches.jpg');
+}
+
+.cover-content {
+    margin-top: 100px;
+}
+
+/* Main cover settings */
+#main-header {
+    display: table;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/covers/home.jpg');
+}
+
+/* Main cover Login button */
+#main-header div.login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    padding: 35px 40px;
+    margin: 0 0 30px;
+    border: medium none;
+    display: block;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, transparent 100%) repeat scroll 0 0 transparent;
+}
+
+#main-header div.login a {
+    display: inline-block;
+    float: right;
+    width: 150px;
+    height: 38px;
+    padding: 0 20px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 35px;
+    white-space: nowrap;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+}
+
+#main-header div.login a:hover {
+    font-size: 16px;
+    color: #4294ff;
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.1s ease;
+}
+
+/* Main cover layout */
+.vertical {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    position: relative;
+    top: 20px;
+    width: 80%;
+    max-width: 710px;
+    margin: 0 auto;
+}
+
+/* Cover content */
+.inner .page-title {
+    margin: 10px 0 10px 0;
+    font-size: 5rem;
+    letter-spacing: -1px;
+    font-weight: 700;
+    color: #fff;
+    -webkit-animation: fade-in-down 0.6s;
+    -moz-animation: fade-in-down 0.6s;
+    -o-animation: fade-in-down 0.6s;
+    animation: fade-in-down 0.6s;
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+    -o-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.inner .page-description {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.5em;
+    font-weight: 400;
+    letter-spacing: 0.01rem;
+    color: rgba(255, 255, 255, 0.8);
+    -webkit-animation: fade-in-down 0.9s;
+    -moz-animation: fade-in-down 0.9s;
+    -o-animation: fade-in-down 0.9s;
+    animation: fade-in-down 0.9s;
+    -webkit-animation-delay: 0.1s;
+    -moz-animation-delay: 0.1s;
+    -o-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+/* Cover ghost button */
+div.ghost-button-group {
+    list-style: none;
+    width: 100%;
+    height: 36px;
+    padding: 0;
+    margin: 20px auto 10px auto;
+    line-height: 140%;
+    text-align: center;
+}
+
+label.button {
+    border: 2px solid rgba(255, 255, 255, 0.80);
+    position: relative;
+    width: 45%;
+    min-width: 260px;
+    height: 44px;
+    font-size: 22px;
+    padding: 5px 12px;
+    margin: 0 15px 20px 15px;
+    color: rgba(255, 255, 255, 0.6);
+    border-radius: 0;
+    z-index: 999;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+
+label.button:hover {
+    text-shadow: none;
+    background: rgba(255, 255, 255, 0.85);
+    border: 2px solid rgba(255, 255, 255, 1);
+    color: #4294ff;
+}
+
+label.button .line {
+    display: block;
+    z-index: 9999;
+    position: absolute;
+    background: none;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+
+label.button:hover .line {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+label.button .line-top {
+    height: 2px;
+    width: 0;
+    left: -110%;
+    top: -2px;
+}
+
+label.button:hover .line-top {
+    width: 100%;
+    left: -2px;
+}
+
+label.button .line-bottom {
+    width: 0;
+    height: 2px;
+    right: -110%;
+    bottom: -2px;
+}
+
+label.button:hover .line-bottom {
+    width: 100%;
+    right: -2px;
+}
+
+label.button .line-left {
+    width: 2px;
+    height: 0;
+    left: -2px;
+    bottom: -110%
+}
+
+label.button:hover .line-left {
+    height: 100%;
+    bottom: -2px;
+}
+
+label.button .line-right {
+    width: 2px;
+    height: 0;
+    right: -2px;
+    top: -110%
+}
+
+label.button:hover .line-right {
+    height: 100%;
+    top: -2px;
+}
+
+/* Create a bouncing scroll-down arrow on homepage with cover image */
+.scroll-down {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    bottom: 45px;
+    left: 50%;
+    margin-left: -16px;
+    width: 34px;
+    height: 34px;
+    font-size: 34px;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    -webkit-animation: bounce 4s 2s infinite;
+    -moz-animation: bounce 4s 2s infinite;
+    -o-animation: bounce 4s 2s infinite;
+    animation: bounce 4s 2s infinite;
+}
+
+/* Stop it bouncing and increase contrast when hovered */
+.scroll-down:hover {
+    color: #fff;
+    -webkit-animation: none;
+    -moz-animation: none;
+    -o-animation: none;
+    animation: none;
+}
+
+/* Cover quote */
+blockquote {
+    font-size: 44px;
+    color: #fff;
+    border: 0;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 120%;
+}
+
+blockquote:before {
+    color: #fff;
+    content: '\f10d';
+    font-family: FontAwesome, sans-serif;
+    font-weight: normal;
+    font-size: 44px;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    margin-right: .5em;
+
+}
+
+blockquote:after {
+    color: #fff;
+    content: '\f10e';
+    font-family: FontAwesome, sans-serif;
+    font-weight: normal;
+    font-size: 44px;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    margin-right: .5em;
+}
+
+/* Cover font */
+blockquote small {
+    color: #fff;
+    display: inline;
+}
+
+/*************************************************
+ ******                                     ******
+ ******         Customer animate            ******
+ ******                                     ******
+ *************************************************/
+
+@-webkit-keyframes bounce {
+    0%, 10%, 25%, 40%, 50% {
+        -webkit-transform: translateY(0);
+    }
+    20% {
+        -webkit-transform: translateY(-10px);
+    }
+    30% {
+        -webkit-transform: translateY(-5px);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@-webkit-keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.buttonNew {
+    border-top: 1px solid #fcfcfc;
+    background: #90caf0;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0e3769), to(#90caf0));
+    background: -webkit-linear-gradient(top, #0e3769, #90caf0);
+    background: -moz-linear-gradient(top, #0e3769, #90caf0);
+    background: -ms-linear-gradient(top, #0e3769, #90caf0);
+    background: -o-linear-gradient(top, #0e3769, #90caf0);
+    padding: 15px 30px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+    color: #ffffff;
+    font-size: 24px;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.buttonNew:hover {
+    border-top-color: #ffffff;
+    background: #ffffff;
+    color: #4294ff;
+}
+
+.buttonNew:active {
+    border-top-color: #0e396e;
+    background: #0e396e;
+}
