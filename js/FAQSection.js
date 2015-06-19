@@ -1,36 +1,6 @@
 /** @jsx React.DOM */
-define(['react', 'SectionWraper'], function (React, SectionWraper) {
-    var Question = React.createClass({displayName: "Question",
-        componentWillUpdate: function (nextProps) {
-            var $el = $(this.getDOMNode()).find('.panel-body');
-
-            if (nextProps.displayBody !== this.props.displayBody && nextProps.displayBody) {
-                $el.slideDown();
-            } else {
-                $el.slideUp();
-            }
-        },
-        render: function () {
-            return (
-                React.createElement("div", {className: "row"}, 
-                    React.createElement("div", {className: "col-md-10 col-md-offset-1"}, 
-                        React.createElement("div", {className: "panel-group"}, 
-                            React.createElement("div", {className: "panel panel-default"}, 
-                                React.createElement("div", {className: "panel-heading", style: this.props.styles.questionTitlePanel}, 
-                                    React.createElement("h4", {className: "panel-title", style: this.props.styles.questionTitle, onClick: this.props.onClick}, this.props.content.title)
-                                ), 
-                                React.createElement("div", {className: "panel-body", displayBody: this.props.displayBody, style: this.props.styles.questionBodyPanel}, 
-                                    React.createElement("p", null, this.props.content.text)
-                                )
-                            )
-                        )
-                    )
-                )
-            )
-        }
-    });
-
-    var FAQSection = React.createClass({displayName: "FAQSection",
+define(['React', 'SectionWraper'], function (React, SectionWraper) {
+    FAQSection = React.createClass({displayName: "FAQSection",
         styles: {
             questionTitlePanel: {
                 backgroundColor: "white"
@@ -61,11 +31,42 @@ define(['react', 'SectionWraper'], function (React, SectionWraper) {
                 return React.createElement(Question, {key: index, styles: this.styles, content: question, onClick: this.toggleClick.bind(this, index), displayBody: displayBody})
             }, this);
             return (
-                React.createElement(SectionWraper, {styles: this.props.styles.sectionHeader, content: this.props.content.sectionTitle}, 
+                React.createElement(SectionWraper, {content: this.props.content.sectionTitle}, 
                         QuestionRows
                 )
             )
         }
     });
+
+    var Question = React.createClass({displayName: "Question",
+        componentWillUpdate: function (nextProps) {
+            var $el = $(this.getDOMNode()).find('.panel-body');
+
+            if (nextProps.displayBody !== this.props.displayBody && nextProps.displayBody) {
+                $el.slideDown();
+            } else {
+                $el.slideUp();
+            }
+        },
+        render: function () {
+            return (
+                React.createElement("div", {className: "row"}, 
+                    React.createElement("div", {className: "col-md-10 col-md-offset-1"}, 
+                        React.createElement("div", {className: "panel-group"}, 
+                            React.createElement("div", {className: "panel panel-default"}, 
+                                React.createElement("div", {className: "panel-heading", style: this.props.styles.questionTitlePanel}, 
+                                    React.createElement("h4", {className: "panel-title", style: this.props.styles.questionTitle, onClick: this.props.onClick}, this.props.content.title)
+                                ), 
+                                React.createElement("div", {className: "panel-body", displayBody: this.props.displayBody, style: this.props.styles.questionBodyPanel}, 
+                                    React.createElement("p", null, this.props.content.text)
+                                )
+                            )
+                        )
+                    )
+                )
+            )
+        }
+    });
+
     return FAQSection;
 });
