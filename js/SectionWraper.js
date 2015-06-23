@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 define(['React'], function (React) {
     var SectionWraper = React.createClass({displayName: "SectionWraper",
-        styles:{
+        styles: {
             sectionTitle: {
                 fontSize: "44px",
                 textAlign: "center",
@@ -24,7 +24,6 @@ define(['React'], function (React) {
                 width: '80%',
                 height: '1px',
                 marginBottom: '5px',
-                marginTop: '60px',
                 position: 'absolute',
                 left: '50%',
                 marginLeft: '-40%',
@@ -37,19 +36,19 @@ define(['React'], function (React) {
         },
         render: function () {
             return (
-            React.createElement("section", {id: "faq", style: this.styles.block}, 
-                React.createElement("div", {className: "container"}, 
-                    React.createElement("div", {className: "row"}, 
-                        React.createElement("div", {className: "col-sx-12"}, 
-                            React.createElement("h1", {style: this.styles.sectionTitle}, this.props.content, 
-                                React.createElement("hr", {style: this.styles.topBreaker})
+                React.createElement("section", {id: "faq", style: this.styles.block}, 
+                    React.createElement("div", {className: "container"}, 
+                        React.createElement("div", {className: "row"}, 
+                            React.createElement("div", {className: "col-sx-12"}, 
+                                React.createElement("h1", {style: this.styles.sectionTitle}, this.props.content, 
+                                    React.createElement("hr", {style: this.styles.topBreaker})
+                                )
                             )
-                        )
-                    ), 
-                this.props.children
-                ), 
-                React.createElement("hr", {style: this.styles.bottomBreaker})
-            )
+                        ), 
+                        this.props.children, 
+                        React.createElement("hr", {style: this.styles.bottomBreaker})
+                    )
+                )
             )
         }
     });

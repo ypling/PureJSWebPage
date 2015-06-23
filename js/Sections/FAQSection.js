@@ -40,9 +40,10 @@ define(['React', 'SectionWraper'], function (React, SectionWraper) {
 
     var Question = React.createClass({displayName: "Question",
         componentWillUpdate: function (nextProps) {
+            console.log(this);
             var $el = $(this.getDOMNode()).find('.panel-body');
 
-            if (nextProps.displayBody !== this.props.displayBody && nextProps.displayBody) {
+            if (nextProps.displayBody) {
                 $el.slideDown();
             } else {
                 $el.slideUp();

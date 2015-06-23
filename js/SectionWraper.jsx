@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 define(['React'], function (React) {
     var SectionWraper = React.createClass({
-        styles:{
+        styles: {
             sectionTitle: {
                 fontSize: "44px",
                 textAlign: "center",
@@ -24,7 +24,6 @@ define(['React'], function (React) {
                 width: '80%',
                 height: '1px',
                 marginBottom: '5px',
-                marginTop: '60px',
                 position: 'absolute',
                 left: '50%',
                 marginLeft: '-40%',
@@ -37,19 +36,19 @@ define(['React'], function (React) {
         },
         render: function () {
             return (
-            <section id="faq" style={this.styles.block}>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-sx-12">
-                            <h1 style={this.styles.sectionTitle}>{this.props.content}
-                                <hr style={this.styles.topBreaker}/>
-                            </h1>
+                <section id="faq" style={this.styles.block}>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-sx-12">
+                                <h1 style={this.styles.sectionTitle}>{this.props.content}
+                                    <hr style={this.styles.topBreaker}/>
+                                </h1>
+                            </div>
                         </div>
+                        {this.props.children}
+                        <hr style={this.styles.bottomBreaker}/>
                     </div>
-                {this.props.children}
-                </div>
-                <hr style={this.styles.bottomBreaker}/>
-            </section>
+                </section>
             )
         }
     });

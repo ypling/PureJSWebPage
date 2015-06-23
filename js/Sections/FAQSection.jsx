@@ -42,7 +42,7 @@ define(['React', 'SectionWraper'], function (React, SectionWraper) {
         componentWillUpdate: function (nextProps) {
             var $el = $(this.getDOMNode()).find('.panel-body');
 
-            if (nextProps.displayBody !== this.props.displayBody && nextProps.displayBody) {
+            if (nextProps.displayBody) {
                 $el.slideDown();
             } else {
                 $el.slideUp();
